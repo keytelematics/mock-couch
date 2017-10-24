@@ -25,7 +25,6 @@
     "couch-viewkey-compare": "1.0.1",
     "ramda": "0.8.0",
     "restify": "5.0.1",
-    "restify-plugins": "1.6.0",
     "underscore": "1.8.3"
   },
   "devDependencies": {
