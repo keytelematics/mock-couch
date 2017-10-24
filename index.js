@@ -4,9 +4,7 @@
 var restify = require('restify'),
   util = require('util'),
   events = require("events");
-
-
-
+const plugins = require('restify-plugins');
 
 function MockCouch(server, options) {
   events.EventEmitter.call(this);
@@ -141,9 +139,10 @@ module.exports = {
         }
       });
       /*jslint unparam:false*/
-      srv.use(restify.bodyParser({ mapParams: false }));
+      //srv.use(restify.bodyParser({ mapParams: false }));
+      srv.use(plugins.bodyParser());
       srv.pre(restify.pre.sanitizePath());
-      srv.use(restify.queryParser());
+      srv.use(plugins.queryParser());
 
       if (options && options.keepAlive === false) {
         /*jslint unparam:true*/
