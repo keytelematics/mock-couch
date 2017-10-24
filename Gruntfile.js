@@ -27,12 +27,12 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.loadNpmTasks('grunt-jslint');
+//  grunt.loadNpmTasks('grunt-jslint');
   grunt.loadNpmTasks('grunt-jasmine-nodejs');
 
   // Default task(s).
   grunt.registerTask('default', [
-    'jslint',
+  //'jslint',
     'jasmine_nodejs'
   ]);
 
